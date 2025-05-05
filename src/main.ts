@@ -126,7 +126,8 @@ async function findSupportedCodecs(): Promise<string[]> {
   } tested`;
   
   // Enable copy button
-  document.getElementById("copy-button")!.disabled = false;
+  const btn = document.getElementById("copy-button") as HTMLButtonElement ;
+  btn.disabled = false;
   
   // Store result data for copying
   (window as any).codecTestResults = {
